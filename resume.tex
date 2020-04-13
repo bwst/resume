@@ -1,0 +1,257 @@
+% !TEX program = pdflatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Benedikt}{Stolz} %{ \urlstyle{same}\href{https://karllorey.com}{karllorey.com}\\
+\href{mailto:mail@bwstolz.de}{mail@bwstolz.de} | +49 170 3420 513 | Munich, Germany
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{KIT, Karlsruhe}
+\descript{MSc in Physics}
+\location{Grad. Nov 2017 | Karlsruhe, Germany}
+focus: Solid State Physics, Particle-Physics\\
+minor: Renewable Energies/Entrepreneurship\\
+\sectionsep
+
+\subsection{KIT, Karlsruhe}
+\descript{BSc in Physics}
+\location{Grad. Sep 2016 | Karlsruhe, Germany}
+focus: Clasic & Modern Physics, Solar Cells\\
+minor: Economics\\
+\sectionsep
+
+\subsection{Gymnasium Wörth am Rhein}
+\descript{Abitur}
+\location{Grad. March 2012 | Wörth,~Germany}
+with distinction
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/bwst}{\bf bwst} \\
+LinkedIn:// \href{https://www.linkedin.com/in/benediktstolz}{\bf Benedikt Stolz} \\
+Twitter:// \href{https://twitter.com/BenediktStolz}{\bf @BenediktStolz}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Intermediate:}
+Python \textbullet{}
+\location{Familiar:}
+JavaScript \\
+HTML/CSS \textbullet{}
+LaTeX \textbullet{}
+R \textbullet{}
+Bash \textbullet{}
+\sectionsep
+
+\subsection{Technology}
+GIT \textbullet{}
+Excel \textbullet{}
+Angular \textbullet{}
+Ionic \textbullet{}
+\sectionsep
+
+\subsection{Topics}
+Venture Capital~\textbullet{}
+Entrepreneurship~\textbullet{}
+Quantified~Self
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{First Momentum}
+\descript{| Founding Partner}
+\location{Jul 2017 - Present | Karlsruhe, Germany}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item founding a venture capital fund to close the German pre-seed funding gap
+\item establishing a technological competitive advantage by implementing scrapers and machine learning to find investment opportunities
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Mercedes Benz Research and Development North America}
+\descript{| Engineering Intern }
+\location{Jul 2016 - Mar 2017 | Sunnyvaly, CA, USA}
+\begin{tightemize}
+\item provided companies with well-skilled IT professionals from abroad.
+\item built a platform and a job board allowing techies to apply for jobs in Germany
+\item applied Machine Learning to implement a scalable screening process.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{PionierGarage}
+\descript{| Chairman}
+\location{Jul 2015 – Feb 2016 | Karlsruhe, Germany}
+\begin{tightemize}
+\item was elected chairman of Germany's biggest student club for entrepreurship
+\item lead a board of six members and the club with around 100 members
+\item hosted events, managed public relations as well as contact with alumni
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Karlscafe}
+\descript{| Co-Founder }
+\location{Nov 2014 – Apr 2015 | Karlsruhe, Germany}
+\begin{tightemize}
+\item conducted research on flight data to find influencing factors on airplane vibrations via Data Mining techniques using SPSS and KNIME
+%\item researched different time-series databases for their applicability to store data in-flight
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Siemens}
+\descript{| Parttime }
+\location{Nov 2014 – Apr 2015 | Karlsruhe, Germany}
+\begin{tightemize}
+\item conducted research on flight data to find influencing factors on airplane vibrations via Data Mining techniques using SPSS and KNIME
+%\item researched different time-series databases for their applicability to store data in-flight
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{Chair Prof. Böhm, IPD, KIT}
+\descript{| Research Assisstant}
+\location{May 2015 – Jun 2016 | Karlsruhe Institute of Technology, Germany}
+Created a Secure Storage mechaism that resides inside the Database Abstraction Layer.
+Presented results at CAiSE in Ljubljana, Slovenia.
+\cite{lorey2016teal}
+\sectionsep
+
+\runsubsection{Chair Prof. Tran-Gia}
+\descript{| Research Assistant}
+\location{Mar 2013 – Jun 2014 | Karlsruhe Institute of Technology, Germany}
+Planned, created, and implemented a framework to measure subjective influence in online social networks. 
+%Obtained data by programming a Facebook app that asks users questions about their friends. 
+\cite{seufert2016assessment}, \cite{seufert2013gamification}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards}
+% \begin{tabular}{rll}
+% 2016 & award & Award for Student Commitment (KIT)\\
+% 2016 & 3\textsuperscript{rd} & Hack.Stuttgart hackathon by Daimler\\
+% 2016 & honoring & Honoring by KIT's president (Ehrenabend des Präsidenten) \\
+% %2016 & 1 of ~100 & Selected participant of the hackathon at Bosch Connected Experience\\
+% 2016 & 3\textsuperscript{rd} & 3 Day Startup competition at WHU\\
+% 2015 & 1\textsuperscript{st} & codeFEST$^{8}$ hackathon by Volkswagen (DACH)\\
+% %2014 & 2\textsuperscript{nd} & Data Mining Cup by prudsys\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+\renewcommand\refname{\vskip -0.75cm} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+{\footnotesize \bibliography{publications}}
+\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
