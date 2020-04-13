@@ -1,7 +1,7 @@
 ![Resume preview](https://github.com/lorey/resume/raw/master/resume.jpg)
 
 # Resume of Benedikt Stolz
-
+This is my resume
 <!--This is my resume. It's written in TeX, based on the awesome [Deedy Resume](https://github.com/deedy/Deedy-Resume) and inspired by [Johannes Schickling's resume](https://github.com/schickling/resume).-->
 
 <!--[View PDF](https://github.com/lorey/resume/raw/master/resume.pdf)-->
