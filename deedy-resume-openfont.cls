@@ -11,6 +11,8 @@
 % Package Imports
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
 \usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
 
 % Publications
 \usepackage{cite}
@@ -39,15 +41,20 @@ Last Updated on \today
 \end{textblock}}
 
 % Name command
-\newcommand{\namesection}[3]{
+\newcommand{\namesection}[4]{
 \centering{
 \fontsize{40pt}{60pt}
 \fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1 
 \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
 } \\[5pt]
 \centering{
-\color{headings}
-\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
+    \color{headings}
+    \fontsize{11pt}{14pt}\selectfont #3} \\[10pt]
+    % \fontspec[Path = fonts/raleway/]{Raleway-Medium}
+\centering{
+    \color{headings}
+    \fontsize{11pt}{14pt}\selectfont #4} 
+    \fontspec[Path = fonts/raleway/]{Raleway-Medium}
 \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
 \vspace{-15pt}
 }
@@ -56,7 +63,7 @@ Last Updated on \today
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt} 
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
-\newcommand{\sectionsep}{\vspace{8pt}}
+\newcommand{\sectionsep}{\vspace{12pt}}
 
 % Headings command
 \titleformat{\section}{\color{headings}
@@ -78,7 +85,38 @@ Last Updated on \today
 \color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
+\newenvironment{tightemize}
+{
+    \vspace{-\topsep}
+    % \hspace{-\leftmargin}
+    \begin{itemize}[leftmargin=*]
+        % \setlength{\itemindent}{-1.2em}
+        % \setlength{\leftmargin}{0pt}
+        % \leftmarginpt
+        % \itemindent0pt
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+    %   \addtolength{\itemindent}{-1.2em}
+        % \itemsep1pt \parskip0pt  \parsep0pt 
+}
 {\end{itemize}\vspace{-\topsep}}
 
+
+% Skill visualization command
+\newcommand{\grade}[1]{%
+\begin{tikzpicture}
+\clip (1em-.3em,-.3em) rectangle (5em +.5em ,.3em);
+\begin{scope}
+\clip (1em-.3em,-.3em) rectangle (#1em +.5em ,.3em);
+\foreach \x in {1,2,...,5}{
+ \path[fill=black] (\x em,0) circle (.25em);
+}
+\end{scope}
+\foreach \x in {1,2,...,5}{
+ \draw (\x em,0) circle (.25em);
+}
+\end{tikzpicture}%
+}
+
+\newcommand\tab[1][1cm]{\hspace*{#1}}
